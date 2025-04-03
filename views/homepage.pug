@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    h1 Custom Objects - Practicum
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Description
+          th Type
+      tbody
+        each item in data
+          tr
+            td= item.properties.name
+            td= item.properties.description
+            td= item.properties.type
+    a(href='/') Return to the homepage
